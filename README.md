@@ -4,7 +4,7 @@ Implementation of the **Transformer architecture** from the ground up, without r
 
 ## Current Progress  
 - [x] **Attention Block** (Scaled Dot-Product Attention + Multi-Head Attention)  
-- [ ] Feed Forward Network  
+- [x] Feed Forward Network  
 - [ ] Positional Encoding  
 - [ ] Encoder  
 - [ ] Decoder  
@@ -34,7 +34,13 @@ Currently implemented:
 - Scaled dot-product attention  
 - Multi-head attention (splitting & concatenation)  
 - Attention masking (optional for causal/decoder use)  
- 
+
+## Feed Forward Block  
+
+Implemented:  
+- Two-layer position-wise feed forward network
+- Non-linearity using GeLU  
+- Applied independently to each position   
 
 ## 📌 Next Steps  
 - Add positional encodings  
