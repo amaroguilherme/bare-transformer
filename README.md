@@ -5,7 +5,7 @@ Implementation of the **Transformer architecture** from the ground up, without r
 ## Current Progress  
 - [x] **Attention Block** (Scaled Dot-Product Attention + Multi-Head Attention)  
 - [x] Feed Forward Network  
-- [ ] Positional Encoding  
+- [x] Positional Encoding  
 - [ ] Encoder  
 - [ ] Decoder  
 - [ ] Full Transformer (Encoder-Decoder)  
@@ -42,9 +42,14 @@ Implemented:
 - Non-linearity using GeLU  
 - Applied independently to each position   
 
-## 📌 Next Steps  
-- Add positional encodings  
-- Implement the feed forward block  
+## Positional Encoding
+
+Implemented:
+- Sinusoidal positional encoding as described in the original Transformer paper
+- Supports fixed sequence length
+- Adds position-dependent information to input embeddings
+
+## 📌 Next Steps   
 - Stack encoder layers  
 - Add the decoder and train a toy model  
 
