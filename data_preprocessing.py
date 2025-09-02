@@ -45,13 +45,14 @@ class DataPreprocessor:
     
     def calculate_positional_encoding(self, encoded_text):
         pe = []
-        for pos in range(encoded_text):
+        for pos in range(len(encoded_text)):
             row = []
             for i in range(self.embedding_dim):
+                angle = pos / (10000 ** (2 * (i//2) / self.embedding_dim))
                 if i % 2 == 0:
-                    value = sin(pos / (10000 ** (i / self.embedding_dim)))
+                    value = sin(angle)
                 else:
-                    value = cos(pos / (10000 ** ((i - 1) / self.embedding_dim)))
+                    value = cos(angle)
                 row.append(value)
             pe.append(row)
         return pe
